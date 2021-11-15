@@ -1,0 +1,23 @@
+job('nodeJS example')
+ 
+   scm {
+       git('git://github.com/sreekanth0195/jenkins-course.git') 
+             node / gitConfigNsme('DSL User')
+             boe / gitConfigEmail('sreekanth0195@gmail.com')
+        }
+     }
+ 
+     triggers {
+         scm('H/5 * * * *')
+     }
+
+     wrappers {
+        nodejs('nodejs') // this is the name of the NodeJS installation on
+                        // Manage Jenkins -> configure Tools -> NodeJS installations -> Name
+    }
+    
+    steps {
+          shell("npm intall")
+     }
+
+ }
