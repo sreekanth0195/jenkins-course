@@ -1,0 +1,5 @@
+def myClosure = {
+       a,b,c->
+       return (a+b+c)
+}
+println(myClosure(1,2,3))
